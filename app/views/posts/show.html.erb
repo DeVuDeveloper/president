@@ -1,4 +1,15 @@
 <section class="user-post-comments">
-  <h4 class="comment-title"><%= @post.title %> by <%= @user.name %></h4>
-  <%= render "post", post: @post %>
+  <div class="post-user">
+    <div class="user-flex">
+      <h4 class="comment-title"><%= @post.title %> by <%= @user.name %></h4>
+        <small class="user-counters">
+          <p>Comments : <%= @post.comments.size%></p>
+          <p>Likes : <%= @post.likes.size %></p>
+        </small>
+    </div>
+    <p><%= @post.text %> </p>
+  </div>
+  <div class="comments-user">
+    <%= render "post", post: @post %> 
+  </div>
 </section>

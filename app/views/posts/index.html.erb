@@ -3,12 +3,19 @@
     <ul class="posts-wrapper" >
       <% @posts.each do |post| %>
         <li>
+          <div class="post-container">
+          <div class="single-post">  
             <%= link_to user_post_path(@user.id, post.id) do %>
             <h4 class="post-title"><%= post.title%></h4>
             <% end %>
             <p><%= post.text%></p>
+          </div>
+            
+            <div class="counters">
               <span>Comments: <%= post.comments.size %></span>
               <span>Likes: <%= post.likes.size %></span>
+              </div>
+            </div>
             <ul class="recent-comments">
               <% post.most_recent_comments.each do |comment| %>
               <li><%= comment.author.name %>: <%= comment.text%></li>
