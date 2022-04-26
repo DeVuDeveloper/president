@@ -1,2 +1,9 @@
-<h1>Here is list of users</h1>
+<section class="users">
+  <% @users.each do |user| %>
+    <%= link_to user_path(user.id) do %>
+    <%= render "user", user: user %>
+    <% end %>
+  <% end %>
+</section>
 
+ 

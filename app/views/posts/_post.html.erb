@@ -1,0 +1,11 @@
+<section>
+<div class="posts">
+  <p><%= @post.text %> </p>
+  <p>Comments : <%= @post.comments.size%>  Likes : <%= @post.likes.size %> </p>
+</div>
+<ul class="comments">
+  <% @post.comments.each do |comment| %>
+  <li><%= comment.author.name %>: <%= comment.text%></li>
+  <% end %>
+</ul>
+</section>

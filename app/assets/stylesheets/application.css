@@ -13,3 +13,98 @@
  *= require_tree .
  *= require_self
  */
+
+ a:-webkit-any-link {
+  text-decoration: none;
+  cursor: pointer;
+  margin: 0;
+}
+
+ .users {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center; 
+  }
+
+  .user {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    border: 3px solid black;
+    width: 80vh;
+    margin-bottom: 20px;
+    padding: 0 20px;
+  }
+
+  .user h2 {
+    color: rgb(65, 59, 59);
+  }
+
+  .user p {
+    text-decoration: none;
+    color: rgb(65, 59, 59);
+  }
+
+  .user h2:hover {
+    color: rgb(19, 18, 18);
+  }
+
+  .user-wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .bio-wrapper {
+    display: flex;
+    flex-direction: column;
+    width: 80vh;
+    margin-bottom: 20px;
+    border: 3px solid black;
+    padding: 0 20px;
+  }
+
+  .bio-wrapper p {
+   margin: 0;
+  }
+
+
+  .bio {
+    margin: 0;
+  }
+
+  .recent-post {
+    padding: 0;
+  }
+  
+  .posts {
+    display: flex;
+    flex-direction: column;
+    width: 80vh;
+    margin-bottom: 20px;
+    border: 3px solid black;
+    padding: 0 20px;
+  }
+
+  .comments-likes {
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+    align-self: flex-end;
+  }
+
+  .posts-wrapper h4 {
+    margin: 0;
+  }
+
+  .posts h4{
+    margin: 0;
+  }
+  
+  .posts p {
+    margin: 0;
+  }
+  
+  

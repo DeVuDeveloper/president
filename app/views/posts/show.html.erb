@@ -1,2 +1,4 @@
-<h1>Here is list of all posts for one user</h1>
-
+<section class="user-post-comments">
+  <h4 class="comment-title"><%= @post.title %> by <%= @user.name %></h4>
+  <%= render "post", post: @post %>
+</section>
