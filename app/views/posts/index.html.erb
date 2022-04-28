@@ -1,7 +1,12 @@
 <section class="all-posts">
+  <nav class="fs-6 p-3 container mt-2 p-2 bio">
+    <%= link_to "Add New Post", new_user_post_path(@user.id) %>
+    <%= link_to "Home", root_path %>
+    <%= link_to "Back", :back %>
+  </nav>
   <%= render "users/user", user: @user %>
     <ul class="posts-wrapper" >
-      <% @posts.each do |post| %>
+      <% @user.posts.each do |post| %>
         <li>
           <div class="post-container flex-one">
           <div class="single-post">  
@@ -16,12 +21,8 @@
               <span>Likes: <%= post.likes.size %></span>
               </div>
             </div>
-            <ul class="recent-comments flex-one">
-              <% post.most_recent_comments.each do |comment| %>
-              <li><%= comment.author.name %>: <%= comment.text%></li>
-              <% end %>
-            </ul>
-         </li>
+             <%= render "most_recent_comments", post: post %> 
+          </li>
       <% end %>
     </ul>
    <%= link_to "All Users", root_path, class: "all-users-link" %>

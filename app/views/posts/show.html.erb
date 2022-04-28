@@ -10,7 +10,8 @@
     <p><%= @post.text %> </p>
   </div>
   <div class="comments-user">
-    <%= render "post", post: @post %> 
+    <%= render "comments", post: @post %> 
   </div>
+  <%= render "comments/create" %>
  <%= link_to "Back", :back , class: "back"%>
 </section>

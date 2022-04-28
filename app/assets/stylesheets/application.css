@@ -276,5 +276,16 @@ body {
     color: #fff;
     border: 1px solid #000;
   }
+
+  .post-form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 30vh;
+  }
+
+  .input placeholder{
+    padding: 10px;
+  }
   
   
