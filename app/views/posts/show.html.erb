@@ -2,6 +2,7 @@
   <div class="post-user flex-one">
     <div class="user-flex">
       <h3 class="post-title"><%= @post.title %> by <%= @user.name %></h3>
+       <%= render "likes/like" %>
         <small class="user-counters">
           <p>Comments : <%= @post.comments.size%></p>
           <p>Likes : <%= @post.likes.size %></p>
@@ -10,8 +11,7 @@
     <p><%= @post.text %> </p>
   </div>
   <div class="comments-user">
-    <%= render "comments", post: @post %> 
+   <%= render "comments/comment_form" %>
   </div>
-  <%= render "comments/create" %>
- <%= link_to "Back", :back , class: "back"%>
+    <%= link_to "Back", :back , class: "back"%>
 </section>
