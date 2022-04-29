@@ -78,6 +78,7 @@ GEM
       bootstrap-icons (~> 1)
       rails (>= 6)
     builder (3.2.4)
+    cancancan (3.3.0)
     capybara (3.36.0)
       addressable
       matrix
@@ -265,6 +266,7 @@ PLATFORMS
 DEPENDENCIES
   bootsnap
   bootstrap-icons-helper
+  cancancan
   capybara
   debug
   factory_bot_rails
