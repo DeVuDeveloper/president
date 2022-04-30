@@ -17,7 +17,7 @@ class PostsController < ApplicationController
 
     if @post.save
       flash[:notice] = 'The post have been created successfully.'
-      redirect_to user_path(@post.author_id, @post.id)
+      redirect_to user_posts_path(@post.author_id, @post.id)
     else
       flash[:alert] = 'Adding a new post failed.'
       render :new, status: :unprocessable_entity
