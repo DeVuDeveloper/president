@@ -214,6 +214,7 @@ a:-webkit-any-link {
   list-style-type: none;
   padding: 2px 16px;
   background-color: #45a29e;
+  margin: 0;
 }
 
 .post-title {
@@ -292,13 +293,13 @@ a:-webkit-any-link {
   border: none;
   background: transparent;
   font-weight: 900;
+  padding: 3px 7px;
+  background-color: #45a29e;
 }
 
 .likes:hover {
-  color: rgb(245, 6, 6);
-  border: none;
-  background: transparent;
-  font-weight: 900;
+  color: #fff;
+  background-color: #c52c21;
 }
 
 .btn-post {
