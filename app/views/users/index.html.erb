@@ -1,4 +1,5 @@
 <section class="users">
+<%= link_to "Sign Out", destroy_user_session_path, 'data-turbo-method': :delete, class: 'logout'%>
   <ul>
   <% @users.each do |user| %>
   <li>
