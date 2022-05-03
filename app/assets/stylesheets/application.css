@@ -63,9 +63,9 @@ a:-webkit-any-link {
 }
 
 .user a {
-  color: #b4c7c6;
   font-size: 42px;
   font-weight: 600;
+  color: #13615d;
 }
 
 .user a:nth-child(4) {
@@ -239,6 +239,10 @@ a:-webkit-any-link {
   background-color: #142833;
 }
 
+.comments li:nth-child(odd) {
+  background-color: #45a29e;
+}
+
 .user-flex {
   display: flex;
   justify-content: space-between;
@@ -284,11 +288,10 @@ a:-webkit-any-link {
 .comments-user {
   margin: 0;
   padding: 0;
-  margin-right: 27vh;
 }
 
 .likes {
-  color: rgb(226, 4, 4);
+  color: #fff;
   border: none;
   background: transparent;
   font-weight: 900;
@@ -336,4 +339,18 @@ a:-webkit-any-link {
 .logout:hover {
   color: rgb(122, 16, 16);
   background-color: #deebea;
+}
+
+.delete-post {
+  color: rgb(226, 4, 4);
+  border: none;
+  background: transparent;
+  font-weight: 900;
+  padding: 3px 7px;
+  background-color: #45a29e;
+}
+
+.delete-post:hover {
+  color: #fff;
+  background-color: #c52c21;
 }

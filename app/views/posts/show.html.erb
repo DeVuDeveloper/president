@@ -1,8 +1,8 @@
 <section class="user-post-comments">
+ <%= button_to "Delete", user_post_path(user_id: @post.author.id, post_id: @post.id), method: :delete, class: 'delete-post' %>
   <div class="post-user flex-one">
     <div class="user-flex">
       <h3 class="post-title"><%= @post.title %> by <%= @user.name %></h3>
-       
         <small class="user-counters">
           <p>Comments : <%= @post.comments.size%></p>
           <p>Likes : <%= @post.likes.size %></p>
@@ -12,6 +12,7 @@
   </div>
   <%= render "likes/like" %>
   <div class="comments-user">
+  <%= render "posts/comments" %>
    <%= render "comments/comment_form" %>
   </div>
   <%= link_to "Back", :back , class: "back"%>

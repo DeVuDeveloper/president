@@ -18,4 +18,8 @@ class User < ApplicationRecord
   def all_posts
     posts.order(created_at: :desc)
   end
+
+  def admin?
+    :role == 'admin'
+  end
 end

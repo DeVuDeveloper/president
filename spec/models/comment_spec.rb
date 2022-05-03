@@ -3,7 +3,7 @@ require 'rails_helper'
 RSpec.describe Comment, type: :model do
   describe 'Validations For the Comment model' do
     before(:each) do
-    @comment = Comment.new(text: 'One comment', author_id: 11, post_id: 32)
+      @comment = Comment.new(text: 'One comment', author_id: 11, post_id: 32)
     end
 
     before { @comment.save }
