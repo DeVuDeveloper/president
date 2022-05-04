@@ -239,6 +239,11 @@ a:-webkit-any-link {
   background-color: #142833;
 }
 
+.comments li {
+  display: flex;
+  justify-content: space-between;
+}
+
 .comments li:nth-child(odd) {
   background-color: #45a29e;
 }
@@ -351,6 +356,25 @@ a:-webkit-any-link {
 }
 
 .delete-post:hover {
+  color: #fff;
+  background-color: #c52c21;
+}
+
+.delete-comment {
+  color: rgb(226, 4, 4);
+  border: none;
+  background: transparent;
+  font-weight: 900;
+  padding: 3px 7px;
+ 
+}
+
+.delete-comment:nth-child(odd){
+  color: rgb(226, 4, 4);
+ 
+}
+
+.delete-comment:hover {
   color: #fff;
   background-color: #c52c21;
 }

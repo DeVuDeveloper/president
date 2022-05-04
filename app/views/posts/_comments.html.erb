@@ -1,7 +1,7 @@
 <ul class="comments flex-one">
   <% @post.comments.each do |comment| %>
   <li><%= comment.author.name %>: <%= comment.text%>
-     <%= button_to "Delete", user_post_comment_path(comment_id: comment.id,  post_id: @post.id, user_id: @post.author.id), :method => :delete if can? :destroy, Comment %>
+     <%= button_to 'Delete', post_comment_path(user_id: comment.author.id, post_id: comment.post.id, id: comment.id), method: :delete, class: 'delete-comment' if can? :destroy, comment %>
   </li>
   <% end %>
 </ul>
