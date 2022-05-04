@@ -361,7 +361,7 @@ a:-webkit-any-link {
 }
 
 .delete-comment {
-  color: rgb(226, 4, 4);
+  color: rgb(189, 82, 82);
   border: none;
   background: transparent;
   font-weight: 900;
@@ -370,11 +370,11 @@ a:-webkit-any-link {
 }
 
 .delete-comment:nth-child(odd){
-  color: rgb(226, 4, 4);
+  color: rgb(233, 128, 128);
  
 }
 
 .delete-comment:hover {
   color: #fff;
-  background-color: #c52c21;
+  background-color: #ca6b64;
 }

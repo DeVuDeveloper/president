@@ -32,7 +32,7 @@ class PostsController < ApplicationController
     post.destroy
     user.save
     flash[:alert] = 'You have deleted this post successfully!'
-    redirect_to user_posts_path(@post.author_id)
+    redirect_to user_posts_path(post.author_id)
   end
 
   private
