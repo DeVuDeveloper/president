@@ -84,3 +84,4 @@ gem 'cancancan'
 
 gem 'rails-controller-testing'
 
+gem 'devise-jwt'
