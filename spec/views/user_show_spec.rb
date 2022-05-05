@@ -1,6 +1,6 @@
 require 'rails_helper'
 
-RSpec.feature 'Logins', type: :feature do
+RSpec.feature 'Tests for user-show page', type: :feature do
   background { visit new_user_session_path }
 
   scenario 'if click on user name redirecting to user/show page' do

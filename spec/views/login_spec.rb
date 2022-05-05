@@ -1,6 +1,6 @@
 require 'rails_helper'
 
-RSpec.feature 'Logins', type: :feature do
+RSpec.feature 'Tests for Log in', type: :feature do
   background { visit new_user_session_path }
   scenario 'if there is form login' do
     expect(page.has_field?('Email')).to be true
