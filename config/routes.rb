@@ -1,10 +1,15 @@
 Rails.application.routes.draw do
-  # get 'static_pages/landing_page'
-  # get 'static_pages/dashboard'
+  devise_scope :user do
+    get "users", to: "devise/sessions#new"
+  end
   devise_for :users
   root 'users#index'
   resources :users, only: [:index, :show] do
     resources :posts, only: [:index, :new, :show, :create, :destroy]
+  end
+
+  devise_scope :user do
+    get '/signout', to: 'devise/sessions#destroy', as: :signout
   end
 
   resources :posts do

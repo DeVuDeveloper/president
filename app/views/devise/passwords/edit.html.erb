@@ -20,7 +20,8 @@
     <%= f.label :password_confirmation, "Confirm new password" %><br />
     <%= f.password_field :password_confirmation, autocomplete: "new-password", class: "form-control form-control-sm" %>
   </div>
-				<button type="submit" class="btn btn-primary btn-block submit-btn">Confirm</button>
+				
+        <%= f.submit "Reset password ", class:"btn btn-sl btn-primary mt-2 btn-block btnForget"  %>
 		 </div>
      <% end %>
       <%= link_to "Back", :back, class: "btn btn-sl btn-dark mt-2 btn-block btnForget"%>
