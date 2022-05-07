@@ -1,13 +1,10 @@
 Rails.application.routes.draw do
-  get 'sessions/create'
+  # get 'static_pages/landing_page'
+  # get 'static_pages/dashboard'
   devise_for :users
-  root "users#index"
+  root 'users#index'
   resources :users, only: [:index, :show] do
     resources :posts, only: [:index, :new, :show, :create, :destroy]
-  end
-
-  devise_scope :user do 
-    get '/users/sign_out' => 'devise/sessions#destroy' 
   end
 
   resources :posts do
@@ -15,4 +12,3 @@ Rails.application.routes.draw do
     resources :likes, only: [:create]
   end
 end
-

@@ -1,9 +1,8 @@
 class User < ApplicationRecord
-  # Include default devise modules. Others available are:
-  # :confirmable, :lockable, :timeoutable, :trackable and :omniauthable
   devise :database_authenticatable, :registerable,
-         :recoverable, :rememberable, :validatable
-
+  :recoverable, :rememberable, :validatable, 
+  :confirmable, :trackable
+  
   has_many :posts, foreign_key: 'author_id', dependent: :destroy
   has_many :comments, foreign_key: 'author_id', dependent: :destroy
   has_many :likes, foreign_key: 'author_id', dependent: :destroy
@@ -17,9 +16,5 @@ class User < ApplicationRecord
 
   def all_posts
     posts.order(created_at: :desc)
-  end
-
-  def admin?
-    :role == 'admin'
   end
 end
