@@ -49,7 +49,6 @@ a:-webkit-any-link {
 
 .users ul {
   list-style-type: none;
-  margin-top: 50px;
 }
 
 .user {
@@ -64,9 +63,9 @@ a:-webkit-any-link {
 }
 
 .user a {
-  color: #b4c7c6;
   font-size: 42px;
   font-weight: 600;
+  color: #13615d;
 }
 
 .user a:nth-child(4) {
@@ -240,6 +239,15 @@ a:-webkit-any-link {
   background-color: #142833;
 }
 
+.comments li {
+  display: flex;
+  justify-content: space-between;
+}
+
+.comments li:nth-child(odd) {
+  background-color: #45a29e;
+}
+
 .user-flex {
   display: flex;
   justify-content: space-between;
@@ -285,11 +293,10 @@ a:-webkit-any-link {
 .comments-user {
   margin: 0;
   padding: 0;
-  margin-right: 27vh;
 }
 
 .likes {
-  color: rgb(226, 4, 4);
+  color: #fff;
   border: none;
   background: transparent;
   font-weight: 900;
@@ -327,3 +334,48 @@ a:-webkit-any-link {
 ::placeholder {
   padding-left: 5px;
 }
+
+.logout {
+  padding: 3px 7px;
+  color: #fff;
+  background-color: #45a29e;
+  margin-top: 50px;
+}
+.logout:hover {
+  color: rgb(122, 16, 16);
+  background-color: #deebea;
+}
+
+.delete-post {
+  color: rgb(226, 4, 4);
+  border: none;
+  background: transparent;
+  font-weight: 900;
+  padding: 3px 7px;
+  background-color: #45a29e;
+}
+
+.delete-post:hover {
+  color: #fff;
+  background-color: #c52c21;
+}
+
+.delete-comment {
+  color: rgb(189, 82, 82);
+  border: none;
+  background: transparent;
+  font-weight: 900;
+  padding: 3px 7px;
+ 
+}
+
+.delete-comment:nth-child(odd){
+  color: rgb(233, 128, 128);
+ 
+}
+
+.delete-comment:hover {
+  color: #fff;
+  background-color: #ca6b64;
+}
+

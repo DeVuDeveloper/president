@@ -80,4 +80,8 @@ group :test do
   gem 'webdrivers'
 end
 
+gem 'cancancan'
+
 gem 'rails-controller-testing'
+
+gem 'devise-jwt'

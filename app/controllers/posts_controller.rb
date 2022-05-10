@@ -1,11 +1,12 @@
 class PostsController < ApplicationController
   def index
     @user = User.includes(:posts).find(params[:user_id])
+    @current_user = current_user
   end
 
   def show
     @user = User.find(params[:user_id])
-    @post = @user.posts.includes(:comments, :likes).find(params[:id])
+    @post = @user.posts.find(params[:id])
   end
 
   def new
@@ -17,11 +18,21 @@ class PostsController < ApplicationController
 
     if @post.save
       flash[:notice] = 'The post have been created successfully.'
-      redirect_to user_posts_path(@post.author_id, @post.id)
+      redirect_to user_posts_path(@post.author_id)
     else
       flash[:alert] = 'Adding a new post failed.'
       render :new, status: :unprocessable_entity
     end
+  end
+
+  def destroy
+    post = Post.find(params[:id])
+    user = User.find(post.author_id)
+    user.post_counter -= 1
+    post.destroy
+    user.save
+    flash[:alert] = 'You have deleted this post successfully!'
+    redirect_to user_posts_path(post.author_id)
   end
 
   private
